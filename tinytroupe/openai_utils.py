@@ -1,6 +1,10 @@
+import g4f.debug
+g4f.debug.logging = True
+
 import os
 import openai
-from openai import OpenAI, AzureOpenAI
+#from openai import OpenAI, AzureOpenAI
+from g4f.client import Client as OpenAI, Client as AzureOpenAI
 import time
 import json
 import pickle
@@ -106,7 +110,7 @@ class OpenAIClient:
         """
         Sets up the OpenAI API configurations for this client.
         """
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=os.getenv("OPENAI_API_BASE"))
+        self.client = OpenAI()
 
     def send_message(self,
                     current_messages,

@@ -30,6 +30,7 @@ dependencies = [
     "rich", "requests", "chevron",
     "llama-index", "llama-index-embeddings-huggingface", "llama-index-readers-web",
     "pypandoc", "docx", "markdown",
+    "g4f",
     "jupyter"
 ]
 
